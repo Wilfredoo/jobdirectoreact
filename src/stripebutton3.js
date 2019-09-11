@@ -2,32 +2,34 @@ import React, { useState } from "react";
 import axios from "axios";
 import { LanguageContext } from "./languageContext";
 import { useContext } from "react";
+import { fail } from "assert";
 
-function StripeButton() {
+function StripeButton3() {
     let stripeKey, itemArray, successUrl, failUrl;
+
     if (window.location.hostname == "localhost") {
         stripeKey = "pk_test_868ha51gEUHT0PTaFFMXWHYT00AlPjWsY3";
-        itemArray = "sku_Fdr59otEvaL6b7";
-        successUrl = "//localhost:8080/jobConfirm";
+        itemArray = "plan_FerG4ShuM9GS8D";
+        successUrl = "//localhost:8080/premiumSet";
         failUrl = "//localhost:8080/StripeButton";
     } else {
         stripeKey = "pk_live_LLZx6k7fXk26iloU4qf46kvW00DNf15eOQ";
-        itemArray = "sku_FdasqwNe7sxEJj";
-        successUrl = "//www.jobdirecto.com/jobConfirm";
+        itemArray = "plan_Fer31qkbJx0UYm";
+        successUrl = "//www.jobdirecto.com/premiumSet";
         failUrl = "//www.jobdirecto.com/StripeButton";
     }
 
     const context = useContext(LanguageContext);
+
     const stripe = Stripe(stripeKey);
+
     const [error, setError] = useState();
 
     const handleClick = () => {
         stripe
             .redirectToCheckout({
-                items: [{ sku: itemArray, quantity: 1 }],
-
+                items: [{ plan: itemArray, quantity: 1 }],
                 successUrl: window.location.protocol + successUrl,
-
                 cancelUrl: window.location.protocol + failUrl
             })
             .then(result => {
@@ -36,14 +38,17 @@ function StripeButton() {
                 }
             });
 
+        console.log("someone wants to pay");
         event.preventDefault();
-        axios.post("/wantsToPay").then(resp => {});
+        axios.post("/wantsToPay").then(resp => {
+            console.log("yes pay");
+        });
     };
 
     return (
         <div>
-            <button className="buttonBasic" onClick={handleClick}>
-                {context.jobPayPage.buttonYES}
+            <button className="buttonBasic buttonPremium" onClick={handleClick}>
+                {context.premiumModal.buyPremium}
                 <br />
             </button>
             <div>{error}</div>
@@ -51,5 +56,5 @@ function StripeButton() {
     );
 }
 
-export default StripeButton;
-StripeButton.contextType = LanguageContext;
+export default StripeButton3;
+StripeButton3.contextType = LanguageContext;

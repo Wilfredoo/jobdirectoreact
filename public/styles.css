@@ -1,392 +1,1030 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  width: 100vw;
+    width: 100vw;
 }
 
-/* jobs page */
-.allJobs {
-  margin-top: 90px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.lockBackground {
+    overflow: hidden;
 }
 
-.urgentJobs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 130px;
+/* POSTS DATA START */
+
+.allPosts {
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Helvetica Neue, Ubuntu, sans-serif;
+}
+
+.postData {
+    width: 40.5%;
+    background-color: white;
+    border-style: solid;
+    margin: 10px;
+    font-size: 40px;
+    padding: 20px;
+    line-height: 65px;
+    position: relative;
+}
+
+.posterGoal {
+    color: black;
+    font-weight: 750;
+    word-break: break-word;
+}
+
+.paidPosterGoal {
+    font-size: 50px;
+}
+
+.postArea {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.posterName {
+    word-break: break-word;
+}
+
+.postConnector {
+    font-style: italic;
+}
+
+.paidPostConnector {
+    border-bottom: 3px solid black;
+    padding-bottom: 3px;
+}
+
+.postMoment {
+    font-size: 30px;
+    font-style: oblique;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+
+.paidPostData {
+    background-color: #ffd700;
+
+    /* background-color: #faf562; */
+
+    padding-bottom: 35px;
+}
+
+/* POSTS DATA FINISH */
+
+#dissapear {
+    color: white;
 }
 
 .urgentCheckBox {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
-.urgentJobData {
-  width: 42.5%;
-  background-color: #004f94;
-  /* background-color: #adff2f; */
-  border-style: solid;
-  border-width: 6px;
-  margin: 10px;
-  font-size: 40px;
-  line-height: 65px;
-  padding: 20px;
-  color: white;
-}
-
-.jobTypeUrgent {
-  font-size: 55px;
-  color: white;
-  font-weight: 750;
-  word-break: break-word;
-}
-
-.jobData {
-  width: 42.5%;
-  background-color: #fffdd0;
-  border-style: solid;
-  margin: 10px;
-  font-size: 40px;
-  padding: 20px;
-}
-
-.jobData.yellow {
-  background-color: white;
-}
-
-.jobForm.yellow {
-  background-color: white;
+.textHighlight {
+    border-bottom: 3px solid black;
+    padding-bottom: 3px;
 }
 
 a:link,
 a:visited {
-  color: black;
-  text-decoration: none;
+    /* color: black; */
+    text-decoration: none;
+}
+
+.callToLogin {
+    color: dodgerblue;
 }
 
 .buttonsAndFilters {
-  margin-top: 80px;
-}
-
-.filter {
-  width: 100%;
-  font-size: 50px;
+    margin-top: 80px;
 }
 
 #jobDetails {
-  margin: 10px;
-  padding: 10px;
-  padding-top: 80px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 80px;
 }
 
 .jobDetails p {
-  font-size: 100px;
+    font-size: 100px;
 }
 
-.btn {
-  background-color: #f1f1f1;
-  border: none;
-  color: black;
-  margin-right: 20px;
-  font-size: 76px;
-  cursor: pointer;
-  right: 0;
-  top: 0;
-  position: absolute;
+.modalButton {
+    background-color: #f1f1f1;
+    border: none;
+    z-index: 4;
+    color: black;
+    margin-right: 20px;
+    font-size: 76px;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 6%;
+    width: 100px;
 }
 
-/* job form */
-.formQuestions {
-  font-size: 40px;
+.deleteModalButton {
+    background-color: #f1f1f1;
+    border: none;
+    z-index: 4;
+    color: black;
+    margin-right: 20px;
+    font-size: 76px;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 6%;
+    width: 100px;
 }
 
 .formInputs {
-  font-size: 50px;
-  width: 100%;
-  height: 60%;
-  margin-bottom: 35px;
-  border-style: solid;
-  border-width: medium;
+    font-size: 40px;
+    width: 95%;
+    height: 80px;
+    line-height: 1.5;
+    padding: 8px 12px;
+    margin-bottom: 35px;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 6px;
+    border-color: grey;
 }
 
-.jobForm {
-  margin: 0 auto;
-  max-width: 800px;
-  width: 100%;
-  padding: 20px;
+.jobForm,
+.personForm {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    padding: 10px;
+}
+
+#personExperience,
+.extraInfo {
+    height: 200px;
 }
 
 .radio {
-  width: 3em;
-  height: 3em;
-  margin-right: 25px;
-  margin-bottom: 30px;
+    width: 3em;
+    height: 3em;
+    margin-right: 25px;
+    margin-bottom: 30px;
 }
 
-#listo {
-  width: 50%;
-  height: 100px;
-  font-size: 50px;
-  background-color: dodgerblue;
-  color: white;
-  margin-top: 50px;
-}
-
-/* confirm page */
 .jobConfirmPage {
-  margin: 40px;
-  padding: 20px;
+    margin: 40px;
+    padding: 20px;
+}
+
+.buttonAndWelcome {
+    display: flex;
+    flex-direction: row;
+}
+
+#welcomeText {
+    right: 60px;
+    position: absolute;
+    text-align: right;
+    word-break: break-word;
+    font-weight: 300;
 }
 
 .confirmButtons {
-  display: flex;
-  justify-content: center;
-  margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
 }
 
+/* buttons mobile start*/
+
+.buttonBasic {
+    color: white;
+    background: dodgerblue;
+    background: #4169e1;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 30px 40px 30px 40px;
+}
+
+.buttonOpaque {
+    background-color: cornsilk;
+    font-size: 42px;
+    font-weight: normal;
+    color: black;
+}
+
+.prePay {
+    margin-top: 50px;
+}
+
+#buttonCreatePost {
+    margin-left: 30px;
+}
+
+.buttonsAuth {
+    float: right;
+    right: 25px;
+    top: 25px;
+    position: absolute;
+    font-size: 35px;
+    display: flex;
+    color: rgb(26, 115, 232);
+}
+
+#translateButton {
+    width: 150px;
+    height: 80px;
+    font-size: 30px;
+    float: left;
+    position: absolute;
+    background-color: white;
+    border-color: black;
+    margin: 30px 30px 12px;
+}
+
+/* buttons mobile finish */
+
 .jobDetailsText {
-  font-size: 45px;
-  margin: 50px;
+    font-size: 45px;
+    margin: 50px;
 }
 
 td {
-  padding: 15px;
+    padding: 15px;
+}
+
+.urgentModal {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 3;
+    border-style: solid;
+    width: 93%;
+    height: 83%;
+    top: 50%;
+    left: 50%;
+    color: white;
+    overflow: scroll;
+    flex-direction: column;
 }
 
 .modal {
-  transform: translate(-50%, -50%);
-  position: fixed;
-  z-index: 2;
-  background: #f1f1f1;
-  border-style: solid;
-  width: 93%;
-  height: 83%;
-  top: 50%;
-  left: 50%;
-  color: black;
-  display: flex;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 3;
+    background: white;
+    border-style: solid;
+    width: 95%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    color: black;
+    overflow: scroll;
 }
 
-.jobMoment {
-  font-size: 30px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  font-style: oblique;
+.backgroundBlock {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
 }
 
-label {
-  font-size: 30px;
+.deleteModal {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 3;
+    width: 70%;
+    height: 20%;
+    background: cornsilk;
+    border-style: solid;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 170px;
 }
 
-/* Login & Registration Page */
+.deleteButton {
+    width: 300px;
+    height: 120px;
+    margin: 40px;
+    font-size: 50px;
+    background-color: brown;
+    color: white;
+}
 
-.login-container {
-  text-align: center;
+/* .flexContainer {
+    display: flex;
+} */
+
+.deletePostButton {
+    /* position: relative; */
+    width: 75px;
+    float: right;
+    height: 75px;
+    font-size: 50px;
+    color: white;
+    background-color: #4169e1;
+    margin-bottom: 20px;
+}
+
+.deletePaidButton {
+    background-color: #4169e1;
+}
+
+.star {
+    height: 75px;
+    width: 75px;
+}
+
+.starMini {
+    height: 55px;
+    width: 55px;
+}
+
+.postIcons {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-bottom: 60px;
+}
+
+.modalPeople {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 3;
+    border-style: solid;
+    width: 93%;
+    height: 83%;
+    top: 50%;
+    left: 50%;
+    color: white;
+    display: flex;
+    overflow: scroll;
+}
+
+.modalPeople,
+.urgentModal {
+    background-color: #ffd700;
+    color: black;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+    padding-top: 140px;
+    margin-top: 100px;
+}
+
+.postTypeContainer {
+    text-align: left;
 }
 
 .login-centering {
-  display: inline-block;
+    display: inline-block;
 }
 
 .underline-link {
-  color: #365899;
-  cursor: pointer;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
+    color: #365899;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .ta {
-  color: #777;
-  font-size: 11px;
-  width: 316px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+    color: #777;
+    font-size: 11px;
+    width: 316px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .error {
-  color: red;
-  font-size: 24px;
-  animation: blinker 1s linear infinite;
-}
-Urgent @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    color: red;
+    font-size: 24px;
+    animation: blinker 1s linear infinite;
 }
 
 .LoginOrRegister {
-  width: 330px;
-  height: 130px;
-  font-size: 40px;
-}
-
-.heading-1 {
-  font-size: 50px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.restName {
-  word-break: break-word;
-}
-
-.busca {
-  font-style: italic;
-}
-
-.jobType {
-  font-size: 45px;
-  font-weight: 900;
-  word-break: break-word;
+    width: 330px;
+    height: 130px;
+    font-size: 40px;
 }
 
 .switch {
-  height: 70px;
-  width: 70px;
+    height: 150px;
+    width: 80px;
 }
 
-#urgentCheckedContainer {
-  margin: 60px;
-  text-align: center;
+#yesAndCheckbox {
+    display: flex;
 }
 
-.UrgentCheckedText {
-  font-size: 40px;
+.contactInfo {
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-style: italic;
 }
 
-#urgentExample {
-  width: 120%;
-  height: 120%;
+.text {
+    font-size: 40px;
+    /* text-align: center; */
 }
 
-#si {
-  font-size: 52px;
-  margin-right: 30px;
-  font-weight: 750;
-  font-style: bold;
-  color: navy;
+.verifyCall {
+    margin-top: 70px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.tooltipRow {
+    padding-top: 40px;
+}
+
+.prePayPics {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 40px;
 }
 
 #urgentCheckBox {
-  width: 70px;
-  height: 70px;
-  border: 1em solid #000;
-  background-color: blue;
-  color: blue;
+    width: 70px;
+    height: 70px;
+    border: 1em solid #000;
+    background-color: blue;
+    color: blue;
+    margin-left: 30px;
 }
 
 #sellingPitchInForm {
-  font-size: 15px;
-  margin-bottom: 40px;
+    font-size: 15px;
+    margin-bottom: 40px;
 }
 
-@media only screen and (min-width: 1000px) {
-  .jobData,
-  .urgentJobData {
-    width: 15.5%;
-    font-size: 20px;
-  }
-
-  .urgentJobData {
-    line-height: 40px;
-  }
-
-  .filter {
-    position: relative;
-    left: 400px;
-    font-size: 30px;
-  }
-
-  .allJobs {
-    margin-top: 60px;
-  }
-
-  .jobType {
-    font-size: 25px;
-  }
-
-  .jobMoment {
-    font-size: 17px;
-  }
-
-  .formQuestions {
-    font-size: 27px;
-  }
-
-  .formInputs {
-    height: 30px;
-    font-size: 25px;
-    margin-bottom: 20px;
-  }
-
-  .radio {
-    width: 2em;
-    height: 2em;
-  }
-
-  #urgentCheckBox {
-    width: 30px;
-    height: 30px;
-  }
-
-  #si {
-    font-size: 25px;
-  }
-
-  .btn-primary,
-  button[type="submit"] {
-    color: white;
-    background: #0074d4;
-  }
-  .btn-secondary {
-    background: #fffdd0;
-    color: #000;
-  }
-
-  .btn-secondary,
-  .btn-primary,
-  input[type="button"],
-  button {
-    font-weight: bold;
-    padding: 20px;
-    font-size: 50px;
-    width: 100%;
-    margin: 0 0 12px;
-    box-shadow: inset 0 0 0 1px rgba(50, 50, 93, 0.1),
-      0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.07);
-    border: 0;
-    border-radius: 6px;
-    transition: all 0.2s ease, box-shadow 0.08s ease-in;
-  }
-
-  .jobTypeUrgent {
-    font-size: 35px;
-  }
-
-  #urgentExample {
-    width: 550px;
-  }
-
-  #urgentCheckedContainer {
-    text-align: left;
-  }
-
-  .UrgentCheckedText {
-    font-size: 30px;
-    margin-top: -60px;
-  }
-
-  #UrgentCheckedButtonYES,
-  #UrgentCheckedButtonNO {
-    width: 530px;
+.filter {
     height: 100px;
+    width: 300px;
     font-size: 30px;
+    margin: 12px;
+    background-color: white;
+    border-color: black;
+    float: left;
+    margin-top: 60px;
+    margin-left: 30px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+.starJobForm {
+    height: 50px;
+    width: 50px;
+}
+
+.heading-1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 150px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Helvetica Neue, Ubuntu, sans-serif;
+    color: #303030;
+    font-weight: 500;
+}
+
+.heading-2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 75px;
+    width: 75px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(70px);
+    -moz-transform: translateX(70px);
+
+    -ms-transform: translateX(70px);
+    transform: translateX(70px);
+}
+
+.slider.round {
+    border-radius: 100px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.modalStarDiv {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.toolTipModalText {
+    margin-left: 20px;
+    /* margin-top: 10px; */
+    font-size: 40px;
+    font-style: italic;
+}
+
+.formQuestions,
+label {
+    font-size: 35px;
+    color: #565656;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Helvetica Neue, Ubuntu, sans-serif;
+}
+
+.postTypeOptions {
+    display: flex;
+    flex-direction: column;
+    margin: 70px;
+}
+
+.personFormLabels {
+    font-size: 17px;
+}
+
+input[type="radio"] {
+    margin-left: 15px;
+}
+
+#seeksJob,
+#offersService {
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+label {
+    font-size: 22px;
+}
+
+#UrgentCheckedButtonYES {
+    margin: 0;
+}
+
+.bigInput {
+    height: 200px;
+}
+.facebookContainer {
+    margin-top: 120px;
+}
+
+#facebook-button {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 45px 80px;
+    background-image: -webkit-linear-gradient(#3b5998, #314b83);
+    display: inline-block;
+    border-radius: 5px;
+    border: solid 1px #283e6b;
+    box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.4);
     font-weight: bold;
-  }
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.3s;
+    &:hover {
+        background-image: -webkit-linear-gradient(#4466ac, #34518e);
+    }
+    &:active {
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
+            0px 1px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.deleteModalTitle {
+    margin: 0;
+}
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.authText {
+    margin-top: 5px;
+    margin-left: 13px;
+}
+
+.buttonPremium {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.premiumDeny {
+    padding: 40px;
+    border-style: groove;
+    border-color: black;
+}
+
+.redFlagDiv {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.redFlag {
+    width: 75px;
+    height: 75px;
+}
+
+.reportDiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    border: solid black;
+    margin-left: 30px;
+}
+
+.reportButton {
+    margin-top: 30px;
+}
+.reportText {
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.redReportText {
+    font-size: 40px;
+    color: red;
+    margin-left: 30px;
+}
+
+.flag {
+    width: 80px;
+    height: 80px;
+}
+
+.modalFlagDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+.reportContainer {
+    display: flex;
+}
+
+.website {
+    font-size: 30px;
+}
+
+.ambassadorText {
+    font-size: 35px;
+    margin: 0;
+    margin-top: -30px;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .prePayPics {
+        width: 28%;
+    }
+    .authText {
+        margin-top: 2px;
+        margin-left: 10px;
+    }
+
+    .toolTipModalText {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    td {
+        padding: 10px;
+    }
+
+    .deletePostButton {
+        width: 45px;
+        height: 45px;
+        font-size: 30px;
+    }
+    .premiumDeny {
+        width: 50%;
+    }
+
+    .star {
+        height: 45px;
+        width: 45px;
+    }
+
+    .starJobForm {
+        height: 30px;
+        width: 30px;
+    }
+
+    .modalButton {
+        margin-right: 12%;
+    }
+
+    .urgentModal,
+    .modalPeople {
+        width: 70%;
+    }
+
+    .jobDetailsText {
+        font-size: 25px;
+    }
+
+    #facebook-button {
+        font-size: 28px;
+        padding: 35px 50px;
+    }
+
+    .heading-1 {
+        font-size: 35px;
+        margin-top: 30px;
+    }
+
+    .buttonBasic {
+        padding: 15px;
+        width: 250px;
+        height: 70px;
+        font-size: 26px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .buttonPremium {
+        width: 50%;
+        height: 100px;
+    }
+    .buttonOpaque {
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .deleteButton {
+        font-size: 28px;
+        width: 120px;
+        height: 90px;
+    }
+
+    .deleteModal {
+        height: 30%;
+    }
+
+    #buttonCreatePost {
+        margin-left: 90px;
+    }
+
+    .contactInfo {
+        margin-top: 40px;
+    }
+
+    #areaInput {
+        height: 50px;
+    }
+
+    #seeksJob,
+    #offersService {
+        width: 20px;
+        font-size: 10px;
+    }
+
+    .personFormLabels {
+        font-size: 22px;
+    }
+
+    .modal {
+        position: fixed;
+        width: 70%;
+        height: 85%;
+        overflow: scroll;
+    }
+
+    .jobForm,
+    .personForm,
+    .serviceForm {
+        margin: 0 auto;
+        max-width: 8000px;
+        width: 100%;
+        padding: 10px;
+        margin-left: 5%;
+    }
+
+    .posterGoal {
+        font-size: 25px;
+    }
+
+    .postMoment {
+        font-size: 17px;
+    }
+
+    .postData {
+        line-height: 45px;
+        width: 15.5%;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .allPosts {
+        margin-top: 4%;
+    }
+
+    .formQuestions {
+        font-size: 27px;
+    }
+
+    .formInputs {
+        width: 600px;
+        height: 30px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .bigInput {
+        height: 150px;
+    }
+
+    .radio {
+        width: 2em;
+        height: 2em;
+    }
+
+    #urgentCheckBox {
+        width: 30px;
+        height: 30px;
+    }
+
+    #listo {
+        width: 400px;
+        height: 100px;
+        font-size: 25px;
+        background-color: dodgerblue;
+        color: white;
+        font-weight: bold;
+    }
+
+    #container {
+        text-align: left;
+    }
+
+    .text {
+        font-size: 24px;
+    }
+
+    .filter {
+        height: 55px;
+        border-radius: 6px;
+
+        position: relative;
+        font-size: 20px;
+        padding: 12px;
+        margin-top: 0;
+        margin-left: 80px;
+        width: 250px;
+    }
+
+    .slider:before {
+        height: 55px;
+        width: 55px;
+    }
+
+    .switch {
+        width: 130px;
+        height: 62px;
+    }
+
+    .buttonsAndFilters {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .itAll {
+    }
 }
